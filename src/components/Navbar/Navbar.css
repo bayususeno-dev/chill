@@ -1,0 +1,249 @@
+@import "../../styles/tokens.css";
+@import "../../styles/font.css";
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: var(--pageheader-other-bg);
+    border-bottom: 1px solid var(--outline-other-border);
+
+    display: flex;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-brand img {
+    display: block;
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-brand img:first-child {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-brand img:last-child {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: 48px;
+}
+
+.navbar-menu a {
+    color: var(--light-primary-text);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.navbar-menu a:hover {
+    color: var(--light-primary-text);
+}
+
+/* =========================
+   USER ACTIONS
+========================= */
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-left: auto;
+}
+
+.navbar-search,
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--light-primary-text);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.navbar-search:hover,
+.navbar-profile:hover {
+    color: var(--light-primary-secondary);
+}
+
+/* =========================
+   PROFILE DROPDOWN
+========================= */
+
+.navbar-profile-dropdown {
+    position: relative;
+}
+
+.navbar-profile {
+    gap: 6px;
+    list-style: none;
+}
+
+.navbar-profile::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown-icon {
+    transition: transform 0.2s ease;
+}
+
+.navbar-profile-dropdown[open] .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.profile-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    right: 0;
+
+    min-width: 180px;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--paper-other-bg);
+    border: 1px solid var(--outline-other-border);
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+}
+
+.profile-dropdown-menu a,
+.profile-dropdown-menu button {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 12px;
+
+    color: var(--light-primary-text);
+    font-size: 14px;
+    font-family: inherit;
+    text-align: left;
+    text-decoration: none;
+
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.profile-dropdown-menu a:hover,
+.profile-dropdown-menu button:hover {
+    background-color: var(--body-other-bg);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 68px;
+    }
+
+    .navbar-container {
+        padding: 0 24px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .navbar-brand img:first-child {
+        height: 26px;
+    }
+
+    .navbar-brand img:last-child {
+        height: 20px;
+    }
+
+    .navbar-menu {
+        gap: 16px;
+    }
+
+    .navbar-menu a {
+        font-size: 14px;
+    }
+
+    .navbar-actions {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 16px;
+    }
+
+    .navbar-menu {
+        gap: 12px;
+    }
+
+    .navbar-menu a {
+        font-size: 12px;
+    }
+
+    .navbar-search svg,
+    .navbar-profile svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .profile-dropdown-menu {
+        min-width: 160px;
+    }
+}
