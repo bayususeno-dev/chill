@@ -1,0 +1,69 @@
+:root {
+    /* MAIN */
+    --color-main-default: rgba(50, 84, 255, 1);
+    --color-main-100: rgba(36, 63, 219, 1);
+    --color-main-200: rgba(25, 45, 183, 1);
+    --color-main-300: rgba(15, 30, 147, 1);
+    --color-main-400: rgba(9, 20, 122, 1);
+
+    /* TEXT */
+    --dark-primary-text: rgba(58, 53, 65, 0.87);
+    --dark-secondary-text: rgba(58, 53, 65, 0.68);
+    --dark-disabled-text: rgba(58, 53, 65, 0.38);
+
+    --light-primary-text: rgba(231, 227, 252, 0.87);
+    --light-primary-secondary: rgba(231, 227, 252, 0.68);
+    --light-primary-disabled: rgba(231, 227, 252, 0.38);
+
+    /* OTHER */
+    --paper-other-bg: rgba(34, 40, 42, 1);
+    --body-other-bg: rgba(47, 51, 52, 1);
+    --pageheader-other-bg: rgba(24, 26, 28, 1);
+    --extra-other-bg: rgba(61, 65, 66, 1);
+
+    --outline-other-border: rgba(231, 227, 252, 0.23);
+    --input-other-border: rgba(231, 227, 252, 0.22);
+    --input-other-bg: rgba(231, 227, 252, 0.04);
+    --chip-other-bg: rgba(231, 227, 252, 0.08);
+
+    /* INFO */
+    --info-pressed: rgba(2, 77, 183, 1);
+    --info-hover: rgba(3, 103, 219, 1);
+    --info-default: rgba(5, 134, 255, 1);
+    --info-background: rgba(205, 241, 255, 0.3);
+
+    /* SUCCESS */
+    --success-pressed: rgba(96, 161, 37, 1);
+    --success-hover: rgba(126, 192, 54, 1);
+    --success-default: rgba(159, 224, 74, 1);
+    --success-background: rgba(244, 253, 219, 0.8);
+
+    /* WARNING */
+    --warning-pressed: rgba(181, 164, 13, 1);
+    --warning-hover: rgba(216, 198, 19, 1);
+    --warning-default: rgba(252, 233, 27, 1);
+    --warning-background: rgba(252, 248, 202, 1);
+
+    /* ERROR */
+    --error-pressed: rgba(183, 35, 21, 1);
+    --error-hover: rgba(219, 61, 31, 1);
+    --error-default: rgba(255, 92, 43, 1);
+    --error-background: rgba(252, 227, 209, 1);
+
+    /* GREYSCALE */
+    --greyscale-900: rgba(33, 33, 33, 1);
+    --greyscale-800: rgba(66, 66, 66, 1);
+    --greyscale-700: rgba(97, 97, 97, 1);
+    --greyscale-600: rgba(117, 117, 117, 1);
+    --greyscale-500: rgba(158, 158, 158, 1);
+    --greyscale-400: rgba(189, 189, 189, 1);
+    --greyscale-300: rgba(224, 224, 224, 1);
+    --greyscale-200: rgba(238, 238, 238, 1);
+    --greyscale-100: rgba(245, 245, 245, 1);
+    --greyscale-50: rgba(250, 250, 250, 1);
+
+
+
+
+
+}
