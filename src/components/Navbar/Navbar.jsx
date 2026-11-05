@@ -8,8 +8,8 @@ function Navbar() {
       <div className="navbar-container">
         {/* Brand */}
         <Link to="/" className="navbar-brand">
-          <img src="/assets/brand/Vector.svg" alt="Vector" />
-          <img src="/assets/brand/CHILL.svg" alt="CHILL" />
+          <img src="/assets/navbar/brand/Vector.svg" alt="" />
+          <img src="/assets/navbar/brand/CHILL.svg" alt="CHILL" />
         </Link>
 
         {/* Navigation */}
