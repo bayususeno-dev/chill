@@ -1,0 +1,209 @@
+/* ========================================
+   HERO BANNER
+======================================== */
+
+.hero-banner {
+    position: relative;
+    min-height: 560px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 5%;
+}
+
+.hero-badge {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+
+    background-color: var(--color-main-default);
+    color: var(--light-primary-text);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.hero-content h1 {
+    max-width: 600px;
+    margin-bottom: 16px;
+
+    color: var(--light-primary-text);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-bottom: 20px;
+
+    color: var(--light-primary-secondary);
+    font-size: 14px;
+}
+
+.hero-meta span:last-child {
+    padding: 4px 10px;
+    border: 1px solid var(--outline-other-border);
+    border-radius: 4px;
+}
+
+.hero-content>p {
+    max-width: 500px;
+    margin-bottom: 28px;
+
+    color: var(--light-primary-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Hero Buttons */
+
+.hero-button-primary,
+.hero-button-secondary,
+.hero-button-age {
+    min-height: 44px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-button-primary {
+    background-color: var(--color-main-300);
+    color: var(--light-primary-text);
+}
+
+.hero-button-primary:hover {
+    background-color: var(--color-main-400);
+    transform: scale(1.05);
+}
+
+.hero-button-secondary {
+    background-color: var(--color-main-default);
+    color: white;
+}
+
+.hero-button-secondary:hover {
+    background-color: var(--color-main-100);
+    transform: scale(1.05);
+}
+
+.hero-button-age {
+    min-width: 44px;
+    padding: 0 12px;
+
+    background-color: var(--chip-other-bg);
+    color: var(--light-primary-text);
+    border: 1px solid var(--outline-other-border);
+    cursor: default;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1024px) {
+    .hero-banner {
+        min-height: 480px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .hero-banner {
+        min-height: 440px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 60px 24px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content>p {
+        max-width: 440px;
+        font-size: 14px;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+    .hero-banner {
+        min-height: 400px;
+    }
+
+    .hero-content {
+        padding: 48px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-meta {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .hero-content>p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero-button-primary,
+    .hero-button-secondary {
+        min-height: 40px;
+        padding: 0 14px;
+        font-size: 12px;
+    }
+
+    .hero-button-age {
+        min-height: 40px;
+    }
+}
