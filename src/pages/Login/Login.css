@@ -1,0 +1,262 @@
+/* ========================================
+   LOGIN PAGE
+======================================== */
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px 16px;
+
+    background:
+        linear-gradient(rgba(24, 26, 28, 0.35),
+            rgba(24, 26, 28, 0.50)),
+        url("/assets/background/masuk.jpg") center/cover no-repeat;
+
+    color: var(--light-primary-text);
+    font-family: Lato, sans-serif;
+}
+
+/* ========================================
+   LOGIN CONTAINER
+======================================== */
+
+.login-container {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 40px;
+
+    background-color: color-mix(in srgb,
+            var(--paper-other-bg) 55%,
+            transparent);
+
+    border: 1px solid var(--outline-other-border);
+    border-radius: 16px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   BRAND
+======================================== */
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-bottom: 36px;
+}
+
+.login-brand img {
+    display: block;
+    width: auto;
+    height: 32px;
+    object-fit: contain;
+}
+
+.login-brand img:first-child {
+    height: 24px;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.login-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.login-header h1 {
+    margin-bottom: 8px;
+
+    color: var(--light-primary-text);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.login-header p {
+    color: var(--light-primary-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ========================================
+   LOGIN FORM
+======================================== */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-field label {
+    color: var(--light-primary-text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ========================================
+   INPUT
+======================================== */
+
+.login-field input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    background-color: var(--input-other-bg);
+    border: 1px solid var(--input-other-border);
+    border-radius: 8px;
+
+    color: var(--light-primary-text);
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.login-field input::placeholder {
+    color: var(--light-primary-disabled);
+}
+
+.login-field input:focus {
+    border-color: var(--color-main-default);
+    background-color: var(--body-other-bg);
+}
+
+/* ========================================
+   PASSWORD
+======================================== */
+
+.login-password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.login-password-wrapper input {
+    padding-right: 48px;
+}
+
+.login-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    padding: 4px;
+
+    background: transparent;
+    border: none;
+
+    color: var(--light-primary-secondary);
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.login-password-toggle:hover {
+    color: var(--light-primary-text);
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.login-submit.button-secondary-contained {
+    width: 100%;
+    min-height: 48px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.login-submit.button-secondary-contained:hover {
+    background-color: var(--color-main-200);
+}
+
+/* ========================================
+   FORM LINKS
+======================================== */
+
+.login-form-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-top: -4px;
+
+    font-size: 13px;
+}
+
+.login-form-links p {
+    margin: 0;
+    color: var(--light-primary-secondary);
+}
+
+.login-form-links a {
+    color: var(--light-primary-text);
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.login-form-links a:hover {
+    color: var(--color-main-100);
+}
+
+.login-forgot-password {
+    white-space: nowrap;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 28px 22px;
+        border-radius: 12px;
+    }
+
+    .login-brand {
+        margin-bottom: 28px;
+    }
+
+    .login-header {
+        margin-bottom: 26px;
+    }
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+}
