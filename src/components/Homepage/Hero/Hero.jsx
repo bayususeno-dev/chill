@@ -19,8 +19,6 @@ function Hero() {
       }}
     >
       <div className="hero-content">
-        <span className="hero-badge">SERIES ORIGINAL</span>
-
         <h1>Duty After School</h1>
 
         <div className="hero-meta">

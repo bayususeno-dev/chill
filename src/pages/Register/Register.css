@@ -14,9 +14,13 @@
     padding: 32px 16px;
 
     background:
-        linear-gradient(rgba(24, 26, 28, 0.35),
-            rgba(24, 26, 28, 0.50)),
-        url("/assets/background/daftar.jpg") center/cover no-repeat;
+        linear-gradient(color-mix(in srgb,
+                var(--pageheader-other-bg) 35%,
+                transparent),
+            color-mix(in srgb,
+                var(--pageheader-other-bg) 50%,
+                transparent)),
+        url("/assets/background/masuk.jpg") center/cover no-repeat;
 
     color: var(--light-primary-text);
     font-family: Lato, sans-serif;
