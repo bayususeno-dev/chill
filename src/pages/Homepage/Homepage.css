@@ -1,0 +1,25 @@
+/* ========================================
+   HOMEPAGE
+======================================== */
+
+.homepage {
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    background-color: var(--pageheader-other-bg);
+    color: var(--light-primary-text);
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .homepage *,
+    .homepage *::before,
+    .homepage *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
