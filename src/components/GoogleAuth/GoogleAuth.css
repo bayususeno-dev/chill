@@ -1,0 +1,56 @@
+/* ========================================
+   GOOGLE AUTH
+======================================== */
+
+.google-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Divider */
+
+.google-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--light-primary-secondary);
+    font-size: 14px;
+}
+
+.google-auth-divider::before,
+.google-auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--outline-other-border);
+}
+
+/* Google Button */
+
+.google-auth-button.button-secondary-outlined {
+    width: 100%;
+    min-height: 48px;
+    gap: 10px;
+
+    background-color: transparent;
+    color: var(--light-primary-text);
+
+    outline: 1px solid var(--outline-other-border);
+    border-radius: 8px;
+
+    transition: background-color 0.2s ease;
+}
+
+.google-auth-button.button-secondary-outlined:hover {
+    background-color: var(--extra-other-bg);
+}
+
+/* Google Icon */
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
