@@ -1,0 +1,122 @@
+/* ========================================
+   MOVIE SECTION
+======================================== */
+
+.movie-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 48px 5% 0;
+}
+
+/* Section Header */
+
+.movie-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 24px;
+}
+
+.movie-section-header h2 {
+    color: var(--light-primary-text);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.movie-section-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 0;
+
+    background: transparent;
+    border: none;
+
+    color: var(--light-primary-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.movie-section-more:hover {
+    color: var(--light-primary-text);
+}
+
+/* Movie Grid */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1024px) {
+    .movie-section {
+        padding-top: 48px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .movie-section-header h2 {
+        font-size: 21px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .movie-section {
+        padding: 36px 24px 0;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .movie-section-header h2 {
+        font-size: 19px;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+    .movie-section {
+        padding: 30px 16px 0;
+    }
+
+    .movie-section-header {
+        margin-bottom: 18px;
+    }
+
+    .movie-section-header h2 {
+        font-size: 17px;
+    }
+
+    .movie-section-more {
+        font-size: 12px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}

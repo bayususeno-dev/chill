@@ -1,0 +1,225 @@
+/* ========================================
+   MOVIE CARD
+======================================== */
+
+.movie-card {
+    position: relative;
+    min-width: 0;
+    overflow: visible;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.movie-card:hover {
+    z-index: 20;
+}
+
+/* Movie Preview Wrapper */
+
+.movie-card-preview {
+    position: relative;
+    width: 100%;
+}
+
+/* Movie Image */
+
+.movie-card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.movie-card-image>img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: object-position 0.3s ease;
+}
+
+/* Expanded Hover Preview */
+
+.movie-card:hover .movie-card-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 170%;
+
+    transform: translate(-50%, calc(-50% + 55px));
+    z-index: 2;
+
+    overflow: hidden;
+    background-color: var(--pageheader-other-bg);
+    border-radius: 12px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+}
+
+/* Expanded Landscape Image */
+
+.movie-card:hover .movie-card-image {
+    width: 100%;
+    aspect-ratio: 12 / 9;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Movie Actions */
+
+.movie-card-actions {
+    display: none;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 20px 10px;
+}
+
+.movie-card:hover .movie-card-actions {
+    display: flex;
+}
+
+/* Movie Card Buttons */
+
+.movie-card-play,
+.movie-card-add,
+.movie-card-more {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.movie-card-play {
+    background-color: white;
+    color: var(--pageheader-other-bg);
+    border: none;
+}
+
+.movie-card-add,
+.movie-card-more {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.movie-card-more {
+    margin-left: auto;
+}
+
+.movie-card-play:hover {
+    background-color: var(--info-default);
+}
+
+.movie-card-add:hover,
+.movie-card-more:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Movie Information */
+
+.movie-card-info {
+    display: none;
+    width: 100%;
+    padding: 10px 20px 20px;
+
+    background-color: var(--pageheader-other-bg);
+}
+
+.movie-card:hover .movie-card-info {
+    display: block;
+}
+
+.movie-card-info h3 {
+    display: none;
+}
+
+/* Movie Metadata */
+
+.movie-card-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 12px;
+
+    color: var(--light-primary-text);
+    font-size: 12px;
+}
+
+.movie-card-age {
+    padding: 3px 8px;
+
+    color: var(--light-primary-secondary);
+    border: 1px solid var(--outline-other-border);
+    border-radius: 4px;
+}
+
+.movie-card-genres {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    color: var(--light-primary-secondary);
+    font-size: 12px;
+}
+
+.genre-dot {
+    margin-right: 12px;
+    color: var(--light-primary-disabled);
+}
+
+/* ========================================
+   TOUCH DEVICES
+======================================== */
+
+@media (hover: none) {
+    .movie-card:hover .movie-card-preview {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .movie-card:hover .movie-card-image {
+        aspect-ratio: 3 / 4;
+    }
+
+    .movie-card-actions,
+    .movie-card-info {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+    .movie-card-info h3 {
+        font-size: 13px;
+    }
+
+    .movie-card-meta {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .movie-card-play,
+    .movie-card-add {
+        width: 36px;
+        height: 36px;
+    }
+}
