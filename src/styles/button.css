@@ -26,38 +26,41 @@
 
 /* PRIMARY BUTTONS */
 
+
+
 .button-primary-contained {
-    background: var(--primary-green);
+    background: var(--color-main-400);
     color: var(--light-primary-text);
 }
 
+
 .button-primary-shadow {
-    background: var(--primary-green-100);
-    color: var(--primary-green);
+    background: var(--color-main-200);
+    color: var(--light-primary-text);
 }
 
 .button-primary-outlined {
-    background: var(--primary-background);
-    color: var(--primary-green);
-    outline: 1px solid var(--primary-green);
+    background: var(--light-primary-text);
+    color: var(--color-main-default);
+    outline: 1px solid var(--color-main-default);
 }
 
 /* SECONDARY BUTTONS */
 
 .button-secondary-contained {
-    background: var(--secondary-orange);
+    background: var(--pageheader-other-bg);
     color: var(--light-primary-text);
 }
 
 .button-secondary-shadow {
-    background: var(--secondary-orange-100);
-    color: var(--secondary-orange);
+    background: var(--light-primary-text);
+    color: var(--body-other-bg);
 }
 
 .button-secondary-outlined {
-    background: var(--primary-background);
-    color: var(--primary-green);
-    outline: 1px solid var(--secondary-orange);
+    background: var(--light-primary-text);
+    color: var(--body-other-bg);
+    outline: 1px solid var(--body-other-bg);
 }
 
 /* TERTIARY BUTTONS */
