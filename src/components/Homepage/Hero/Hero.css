@@ -80,33 +80,69 @@
     gap: 12px;
 }
 
-/* Hero Buttons */
+/* ========================================
+   HERO BUTTONS
+======================================== */
 
-.hero-button-primary,
-.hero-button-secondary,
+/* Primary Button */
+
+.hero-button-primary.button-primary-contained {
+    background-color: var(--color-main-300);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-button-primary.button-primary-contained:hover {
+    background-color: var(--color-main-400);
+    transform: scale(1.05);
+}
+
+/* Secondary Button */
+
+.hero-button-secondary.button-primary-shadow {
+    background-color: var(--color-main-default);
+    color: var(--light-primary-text);
+
+    gap: 8px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-button-secondary.button-primary-shadow:hover {
+    background-color: var(--color-main-100);
+    transform: scale(1.05);
+}
+
+/* Age Rating */
+
 .hero-button-age {
-    min-height: 44px;
-    padding: 0 20px;
+    min-width: 44px;
+    min-height: 42px;
+    padding: 0 12px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
 
-    border: none;
+    background-color: var(--chip-other-bg);
+    color: var(--light-primary-text);
+
+    border: 1px solid var(--outline-other-border);
     border-radius: 8px;
 
+    font-family: Lato, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
 
-    transition: background-color 0.2s ease,
-        transform 0.2s ease;
+    cursor: default;
 }
 
 .hero-button-primary {
-    background-color: var(--color-main-300);
+    background-color: var(--color-main-100);
     color: var(--light-primary-text);
 }
 
@@ -133,6 +169,15 @@
     color: var(--light-primary-text);
     border: 1px solid var(--outline-other-border);
     cursor: default;
+}
+
+.hero-button-primary.button-primary-contained {
+    background-color: var(--color-main-300);
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 /* ========================================

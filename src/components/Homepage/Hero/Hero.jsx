@@ -36,11 +36,17 @@ function Hero() {
         </p>
 
         <div className="hero-actions">
-          <Link to="/login" className="hero-button-primary">
+          <Link
+            to="/login"
+            className="button-primary-contained hero-button-primary"
+          >
             Mulai
           </Link>
 
-          <button type="button" className="hero-button-secondary">
+          <button
+            type="button"
+            className="button-primary-shadow hero-button-secondary"
+          >
             <Info size={18} />
             Selengkapnya
           </button>
