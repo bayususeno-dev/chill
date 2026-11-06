@@ -1,0 +1,120 @@
+/* ========================================
+   CONTINUE WATCHING SECTION
+======================================== */
+
+.continue-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 48px 5% 0;
+}
+
+/* Section Header */
+
+.continue-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 24px;
+}
+
+.continue-section-header h2 {
+    color: var(--light-primary-text);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.continue-section-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 0;
+
+    background: transparent;
+    border: none;
+
+    color: var(--light-primary-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.continue-section-more:hover {
+    color: var(--light-primary-text);
+}
+
+/* Continue Watching Grid */
+
+.continue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 1024px) {
+    .continue-section {
+        padding-top: 48px;
+    }
+
+    .continue-grid {
+        gap: 16px;
+    }
+
+    .continue-section-header h2 {
+        font-size: 21px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .continue-section {
+        padding: 36px 24px 0;
+    }
+
+    .continue-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .continue-section-header h2 {
+        font-size: 19px;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+    .continue-section {
+        padding: 30px 16px 0;
+    }
+
+    .continue-section-header {
+        margin-bottom: 18px;
+    }
+
+    .continue-section-header h2 {
+        font-size: 17px;
+    }
+
+    .continue-section-more {
+        font-size: 12px;
+    }
+
+    .continue-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
