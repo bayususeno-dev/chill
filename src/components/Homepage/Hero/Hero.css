@@ -70,10 +70,12 @@
    HERO BUTTONS
 ======================================== */
 
-/* Primary Button */
+/* PRIMARY BUTTON */
 
 .hero-button-primary.button-primary-contained {
-    background-color: var(--color-main-300);
+    background-color: var(--color-main-100);
+    color: var(--light-primary-text);
+    text-decoration: none;
 
     transition:
         background-color 0.2s ease,
@@ -81,16 +83,15 @@
 }
 
 .hero-button-primary.button-primary-contained:hover {
-    background-color: var(--color-main-400);
+    background-color: var(--color-main-default);
     transform: scale(1.05);
 }
 
-/* Secondary Button */
+/* SECONDARY BUTTON */
 
 .hero-button-secondary.button-primary-shadow {
-    background-color: var(--color-main-default);
+    background-color: var(--body-other-bg);
     color: var(--light-primary-text);
-
     gap: 8px;
 
     transition:
@@ -103,7 +104,7 @@
     transform: scale(1.05);
 }
 
-/* Age Rating */
+/* AGE RATING */
 
 .hero-button-age {
     min-width: 44px;
@@ -127,43 +128,44 @@
     cursor: default;
 }
 
-.hero-button-primary {
-    background-color: var(--color-main-100);
+/* ========================================
+   HERO SOUND TOGGLE
+======================================== */
+
+.hero-sound-toggle {
+    position: absolute;
+    right: 5%;
+    bottom: 40px;
+    z-index: 3;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(24, 26, 28, 0.55);
     color: var(--light-primary-text);
-}
 
-.hero-button-primary:hover {
-    background-color: var(--color-main-400);
-    transform: scale(1.05);
-}
-
-.hero-button-secondary {
-    background-color: var(--color-main-default);
-    color: white;
-}
-
-.hero-button-secondary:hover {
-    background-color: var(--color-main-100);
-    transform: scale(1.05);
-}
-
-.hero-button-age {
-    min-width: 44px;
-    padding: 0 12px;
-
-    background-color: var(--chip-other-bg);
-    color: var(--light-primary-text);
     border: 1px solid var(--outline-other-border);
-    cursor: default;
-}
+    border-radius: 50%;
 
-.hero-button-primary.button-primary-contained {
-    background-color: var(--color-main-300);
-    text-decoration: none;
+    cursor: pointer;
 
     transition:
         background-color 0.2s ease,
         transform 0.2s ease;
+}
+
+.hero-sound-toggle:hover {
+    background-color: var(--color-main-default);
+    transform: scale(1.08);
+}
+
+.hero-sound-toggle:focus-visible {
+    outline: 2px solid var(--light-primary-text);
+    outline-offset: 3px;
 }
 
 /* ========================================
@@ -197,6 +199,11 @@
     .hero-content>p {
         max-width: 440px;
         font-size: 14px;
+    }
+
+    .hero-sound-toggle {
+        right: 24px;
+        bottom: 24px;
     }
 }
 
@@ -236,5 +243,12 @@
 
     .hero-button-age {
         min-height: 40px;
+    }
+
+    .hero-sound-toggle {
+        right: 16px;
+        bottom: 18px;
+        width: 36px;
+        height: 36px;
     }
 }
