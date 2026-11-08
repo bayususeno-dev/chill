@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import "./Footer.css";
 
 function Footer() {
+  const [isGenreOpen, setIsGenreOpen] = useState(false);
+  const [isHelpOpen, setIsHelpOpen] = useState(false);
+
   return (
     <footer className="footer body-large-medium">
-      <div className="footer-container ">
+      <div className="footer-container">
         {/* Brand */}
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
@@ -17,8 +22,29 @@ function Footer() {
 
         {/* Genre */}
         <div className="footer-links">
-          <h4>Genre</h4>
-          <div className="footer-link-grid">
+          <button
+            type="button"
+            className="footer-links-toggle"
+            onClick={() => setIsGenreOpen((prev) => !prev)}
+            aria-expanded={isGenreOpen}
+            aria-controls="footer-genres"
+          >
+            Genre
+            <span className="footer-chevron">
+              {isGenreOpen ? (
+                <ChevronUp size={20} />
+              ) : (
+                <ChevronDown size={20} />
+              )}
+            </span>
+          </button>
+
+          <div
+            className={`footer-links-content footer-link-grid ${
+              isGenreOpen ? "is-open" : ""
+            }`}
+            id="footer-genres"
+          >
             <Link to="/genre/action">Aksi</Link>
             <Link to="/genre/drama">Drama</Link>
             <Link to="/genre/anak">Anak-anak</Link>
@@ -35,11 +61,30 @@ function Footer() {
 
         {/* Help */}
         <div className="footer-links">
-          <h4>Bantuan</h4>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/contact">Kontak Kami</Link>
-          <Link to="/privacy">Privasi</Link>
-          <Link to="/terms">Syarat & Ketentuan</Link>
+          <button
+            type="button"
+            className="footer-links-toggle"
+            onClick={() => setIsHelpOpen((prev) => !prev)}
+            aria-expanded={isHelpOpen}
+            aria-controls="footer-help"
+          >
+            Bantuan
+            <span className="footer-chevron">
+              {isHelpOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </span>
+          </button>
+
+          <div
+            className={`footer-links-content footer-help-links ${
+              isHelpOpen ? "is-open" : ""
+            }`}
+            id="footer-help"
+          >
+            <Link to="/faq">FAQ</Link>
+            <Link to="/contact">Kontak Kami</Link>
+            <Link to="/privacy">Privasi</Link>
+            <Link to="/terms">Syarat & Ketentuan</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { UserRound, Star, LogOut, ChevronDown } from "lucide-react";
-import "../Navbar/Navbar.css";
+import "./Navbar.css";
 
 function Navbar() {
   return (

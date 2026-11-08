@@ -78,7 +78,7 @@ function Login() {
               Belum punya akun? <Link to="/register">Daftar</Link>
             </p>
 
-            <Link to="/forgot-password" className="login-forgot-password">
+            <Link to="/" className="login-forgot-password">
               Lupa kata sandi?
             </Link>
           </div>

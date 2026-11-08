@@ -1,18 +1,27 @@
+/* ========================================
+   FOOTER
+======================================== */
+
 .footer {
     width: 100%;
     background-color: var(--pageheader-other-bg);
     border-top: 1px solid var(--outline-other-border);
     padding: 48px 24px;
-    color: #FFFFFF;
+    color: var(--light-primary-text);
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     gap: 48px;
 }
+
+/* ========================================
+   FOOTER BRAND
+======================================== */
 
 .footer-brand {
     display: flex;
@@ -40,16 +49,39 @@
     margin: 0;
 }
 
+/* ========================================
+   FOOTER LINKS
+======================================== */
+
 .footer-links {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.footer-links h4 {
+.footer-links-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0 0 4px;
+
+    background: transparent;
+    border: none;
+
+    color: var(--light-primary-text);
+    font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    margin: 0 0 4px;
+
+    text-align: left;
+}
+
+.footer-links-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer-links a {
@@ -63,20 +95,66 @@
     color: #FFFFFF;
 }
 
+/* Genre Grid */
+
 .footer-link-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(80px, 1fr));
     gap: 12px 24px;
 }
 
-/* Responsive */
+.footer-chevron {
+    display: none;
+}
+
+/* ========================================
+   TABLET & MOBILE
+======================================== */
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        gap: 32px;
+        gap: 28px;
+    }
+
+    .footer-brand {
+        margin-top: 0;
+    }
+
+    .footer-links {
+        gap: 0;
+        border-bottom: 1px solid var(--outline-other-border);
+    }
+
+    .footer-links-toggle {
+        width: 100%;
+        min-height: 44px;
+        margin: 0;
+
+        cursor: pointer;
+    }
+
+    .footer-chevron {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--light-primary-secondary);
+
+        transition: transform 0.2s ease;
+    }
+
+    .footer-links-content {
+        display: none;
+        padding: 12px 0 20px;
+    }
+
+    .footer-links-content.is-open {
+        display: flex;
     }
 
     .footer-link-grid {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 12px 20px;
     }
 }
