@@ -23,3 +23,9 @@
         animation-duration: 0.01ms !important;
     }
 }
+
+@media (max-width: 480px) {
+    .homepage {
+        padding-bottom: 24px;
+    }
+}

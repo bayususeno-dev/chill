@@ -125,3 +125,52 @@
         height: 40px;
     }
 }
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+    .continue-card {
+        border-radius: 8px;
+    }
+
+    .continue-card-image {
+        aspect-ratio: 16 / 8;
+    }
+
+    .continue-card-info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        width: 100%;
+        padding: 10px 12px;
+
+        background: linear-gradient(transparent,
+                rgba(24, 26, 28, 0.9));
+    }
+
+    .continue-card-info h3 {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .continue-card-info p,
+    .continue-card-info .progress-bar {
+        display: none;
+    }
+
+    .continue-play-button {
+        display: none;
+    }
+
+    .continue-card:hover {
+        transform: none;
+    }
+
+    .continue-card:hover .continue-card-image img {
+        transform: none;
+    }
+}

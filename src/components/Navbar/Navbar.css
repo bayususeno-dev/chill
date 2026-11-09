@@ -227,7 +227,7 @@
     }
 
     .navbar-menu {
-        gap: 12px;
+        gap: 8px;
     }
 
     .navbar-menu a {
@@ -242,5 +242,10 @@
 
     .profile-dropdown-menu {
         min-width: 160px;
+    }
+
+    .navbar-avatar {
+        width: 22px;
+        height: 22px;
     }
 }

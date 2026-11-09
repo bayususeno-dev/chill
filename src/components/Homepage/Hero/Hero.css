@@ -213,42 +213,79 @@
 
 @media (max-width: 480px) {
     .hero-banner {
-        min-height: 400px;
+        min-height: 260px;
+        background-position: center 35%;
     }
 
     .hero-content {
-        padding: 48px 16px;
+        padding: 24px 16px;
     }
 
     .hero-content h1 {
-        font-size: 30px;
+        font-size: 24px;
+        margin-bottom: 8px;
     }
 
     .hero-meta {
-        gap: 10px;
-        font-size: 12px;
+        gap: 8px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .hero-meta span:last-child {
+        padding: 2px 6px;
     }
 
     .hero-content>p {
-        font-size: 13px;
-        line-height: 1.6;
+        max-width: 90%;
+        margin-bottom: 14px;
+
+        font-size: 11px;
+        line-height: 1.45;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
-    .hero-button-primary,
-    .hero-button-secondary {
-        min-height: 40px;
-        padding: 0 14px;
-        font-size: 12px;
+    .hero-actions {
+        gap: 6px;
+    }
+
+    .hero-button-primary.button-primary-contained,
+    .hero-button-secondary.button-primary-shadow {
+        min-height: 32px;
+        padding: 0 10px;
+        border-radius: 7px;
+        font-size: 10px;
+    }
+
+    .hero-button-secondary.button-primary-shadow {
+        gap: 5px;
+    }
+
+    .hero-button-secondary svg {
+        width: 14px;
+        height: 14px;
     }
 
     .hero-button-age {
-        min-height: 40px;
+        min-width: 34px;
+        min-height: 32px;
+        padding: 0 8px;
+        font-size: 10px;
     }
 
     .hero-sound-toggle {
         right: 16px;
-        bottom: 18px;
-        width: 36px;
-        height: 36px;
+        bottom: 16px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero-sound-toggle svg {
+        width: 15px;
+        height: 15px;
     }
 }

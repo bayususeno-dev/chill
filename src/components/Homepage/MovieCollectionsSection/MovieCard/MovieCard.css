@@ -208,18 +208,31 @@
 ======================================== */
 
 @media (max-width: 480px) {
-    .movie-card-info h3 {
-        font-size: 13px;
+    .movie-card-image {
+        aspect-ratio: 2 / 3;
+        border-radius: 7px;
     }
 
     .movie-card-meta {
-        font-size: 11px;
+        font-size: 10px;
         gap: 6px;
     }
 
-    .movie-card-play,
-    .movie-card-add {
-        width: 36px;
-        height: 36px;
+    .movie-card:hover .movie-card-preview {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .movie-card:hover .movie-card-image {
+        aspect-ratio: 2 / 3;
+    }
+
+    .movie-card-actions,
+    .movie-card-info {
+        display: none !important;
     }
 }
